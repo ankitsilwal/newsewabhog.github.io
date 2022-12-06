@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    background-color: rgba(235, 138, 138, 0.325);
+    }
+    .heading h1{
+    position:relative;
+    top: 2%;
+    left:45%;
+    }
+    .heading h2{
+    position:relative;
+    top: 10%;
+    left:30%;
+    }
+    h1{
+    font-family: sans-serif;
+    color:#18067cc4;
+    align-items: center;
+    }
+    .rating form {
+    display: none;
+    }
+.thanks-msg {
+        display: none;
+        font-size: 20px;
+        margin: 40px auto;
+        color: #4caf50;
+        background-color: rgba(76, 175, 80, 0.1411764705882353);
+        padding: 8px 20px;
+        border-left: 3px solid #4caf50;
+        border-radius: 20px;
+        }
+        .rating input {
+        display: none;
+        }
+        .rating {
+        margin: 50px auto;
+        display: table;
+        width: 350px;
+        }
+        .rating label {
+        padding: 10px;
+        float: right;
+        font-size: 44px;
+        color: #eee;
+        }
+        .rating input:not(:checked) ~ label:hover,
+        .rating input:not(:checked) ~ label:hover ~ label {
+        color: #10108a;
+        }
+        .rating input:checked ~ label {
+        color: rgb(253, 249, 251);
+        }
+        .rating form .rating-reaction:before {
+        width: 100%;
+        float: left;
+        color: #0f0f0e;
+    }
+    .rating #rating-1:checked ~ form .rating-reaction:before {
+        content: "Worst";
+        }
+        .rating #rating-2:checked ~ form .rating-reaction:before {
+        content: "Bad";
+        }
+        .rating #rating-3:checked ~ form .rating-reaction:before {
+        content: "OK";
+        }
+        .rating #rating-4:checked ~ form .rating-reaction:before {
+        content: "Good";
+        }
+        .rating #rating-5:checked ~ form .rating-reaction:before {
+            content: "Awesome";
+            }
+            .rating input:checked ~ form {
+            border-top: 1px solid #ddd;
+            width: 100%;
+            padding-top: 15px;
+            margin-top: 15px;
+            display: inline-block;
+            }
+            .rating form .rating-reaction {
+            font-size: 24px;
+            float: left;
+            text-transform: capitalize;
+            }
+            .rating form .submit{
+            border: none;
+            outline: none;
+            background: rgba(246, 122, 122, 0.063);
+            color: #fff;
+            font-size: 18px;
+            border-radius: 4px;
+            padding: 5px 15px;
+            cursor: pointer;
+            float: right;
+            }
+            form .submit:hover {
+            background-color: rgb(236, 136, 136);
+            }            

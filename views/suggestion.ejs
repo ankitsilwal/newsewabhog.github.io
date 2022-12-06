@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./css/suggestion.css">
+</head>
+<body>
+<div class="container">
+    <form onsubmit="sendemail(); reset(); return false">
+    
+<h3>GET IN TOUCH</h3>
+<input type="text" id="name " placeholder="Your Name" requried>
+<input type="email" id="email " placeholder="Email id" requried>
+<textarea id="Message" rows="4" placeholder="How can we help you?"></textarea>
+<button type="submit"> Send </button>
+   </form>
+</div>
+</body>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+ function sendemail(){
+    Email.send({                                                                             
+    Host : "smtp.elasticemail.com",
+    Username : "ankitk5620@gmail.com",
+    Password : "E4031724283AB99D9BAF881D65D786C50DE9",
+    To : 'vivaansilwal@gmail.com',
+    From : 'ankitk5620@gmail.com',
+    Subject : "New Contact Form Enquriy",
+    Body : "Name:"+ document.getElementById("name").value
+    + "<br> Email"+ document.getElementById("email").value
+   + "<br> Message" + document.getElementById("Message").value,
+}).then(
+  message => alert(message)
+);}
+</script>
+</html>
